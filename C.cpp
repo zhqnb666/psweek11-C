@@ -30,20 +30,20 @@ bool check(int x) {
 
 void work() {
     int m = 0;
-    for (int i = 1; i <= 3333; i++) {
-        int x = walk(rand() % N + 1);
+    for (int i = 1; i <= N; i++) {
+        int x = walk(rand() % M + 1);
         m = max(m, x);
-        if (i == 3333) {
+        if (i == N) {
             total_steps = 0;
             check(x);
         }
     }
-    for (int i = 1; i <= 3333; i++) {
+    for (int i = 1; i <= N; i++) {
         check(walk(1));
     }
     check(walk(m));
-    for (int i = 1; i <= 3333; i++) {
-        check(walk(3333));
+    for (int i = 1; i <= N; i++) {
+        check(walk(N));
     }
 }
 

@@ -9,7 +9,7 @@ const int N = 3333, M = 1e9 + 7;
 int total_steps = 0;
 
 inline int walk(int steps) {
-    printf("%d\n", steps);
+    printf("walk %d\n", steps);
     total_steps += steps;
     fflush(stdout);
     int ret;
@@ -19,7 +19,7 @@ inline int walk(int steps) {
 
 bool check(int x) {
     if (mp.count(x)) {
-        fprintf(stderr, "%d\n", total_steps - mp[x]);
+        printf("guess %d\n", total_steps - mp[x]);
         fflush(stdout);
         exit(0);
     } else {
@@ -48,7 +48,7 @@ void work() {
 }
 
 int main() {
-    srand(time(0));
+    srand(114514);
     work();
     return 0;
 }
